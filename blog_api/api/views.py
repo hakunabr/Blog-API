@@ -27,6 +27,7 @@ class BlogPostViewSet(viewsets.ModelViewSet):
             else:
                 # if its not valid, we return a 400 Bad Request response
                 return Response({"error": "Invalid date format. Please use YYYY-MM-DD"}, status=status.HTTP_400_BAD_REQUEST)
+        
         else:
             # if no date is present, return all posts
             queryset = BlogPost.objects.all()
