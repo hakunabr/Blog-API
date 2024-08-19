@@ -1,7 +1,5 @@
 from django_filters import rest_framework as filters
 from .models import BlogPost
-from django.core.exceptions import ValidationError
-from datetime import datetime
 
 class BlogPostFilter(filters.FilterSet):
     # crate the available filters to be used to query the api
